@@ -1,0 +1,87 @@
+body{
+  background-color:antiquewhite;
+  
+}
+.grid-layout{
+  height: 900px;
+  width: 120%;
+  
+  
+  display: grid;
+  grid-template-areas: 'titulo titulo '
+                       'foto caracteristicas '
+                        'descripcion descripcion'
+                        'comentarios comentarios';
+                        
+
+  grid-template-columns: 35% auto ;
+  grid-template-rows: auto auto auto auto;
+}
+.caja1{
+  text-align: center;
+  grid-area: titulo;
+  background-color: blue;
+  
+ 
+  font-size: 45px;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+.caja2{
+  grid-area: foto;
+  
+
+ 
+}
+.caja3{
+  grid-area: caracteristicas;
+  
+  
+  
+}
+
+.caja4{
+  grid-area: descripcion;
+  
+  
+  font-size: 24px;
+  font-family: 'Lobster', cursive;
+
+}
+.caja5{
+  grid-area: comentarios;
+ 
+  
+}
+
+.especificaciones-telefono{
+  font-size: 32px;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+img[alt]{
+  padding: 10px;
+  background-color: yellow;
+  margin: 5px 15px;
+  
+  border-width: 2px;
+  border-color: red;
+  border-style: solid;
+}
+.parrafo-especial{
+  font-size: 26px;
+  font-family: 'Lobster', cursive;
+}
+.titulos{
+  font-size: 26px;
+  font-family:'Lobster', cursive;
+  text-decoration:red wavy underline;
+}
+[type="radio"]{
+  margin: 12px;
+}
+a[href="https://www.motorola.com.ar"]{
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
