@@ -6,6 +6,20 @@
 
 </head>
 <body>
+    <script>
+        async function MostrarCantidad(){
+            let response = await fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/statistics');
+            let objeto = await response.json();
+            
+            let cantidadProductos = objeto.amount_of_products;
+            let text = document.createTextNode(cantidadProductos);
+            document.getElementById("cantidadProductos").appendChild(text);
+        }
+        MostrarCantidad();
+        
+        
+        
+    </script>
     <div class="buscador">
 
     </div>
@@ -14,6 +28,7 @@
             <label>Buscar</label>
             <input type="text" size =50 placeholder="Busca productos, marcas, y lo que desees">
             <button>Buscar</button>
+            <p>Cantidad de productos: <strong id="cantidadProductos"> </strong></p>
         </div>
         <div id="listado-productos">
                 <div class="caja">
