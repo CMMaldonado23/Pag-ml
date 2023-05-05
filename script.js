@@ -1,13 +1,15 @@
 function agregarCometario(evento){
     evento.preventDefault();
     //obtengo valores ingresados del comentario 
+    
     let Textocomentario = document.getElementById("Texto-comentario").value;
 
     let puntaje = document.getElementById("puntaje-producto").value;
 
     //agrego el feedback a la pagina
-    let texto = document.createTextNode(Textocomentario + ' - '+ puntaje + '/5').value;
+    let texto = document.createTextNode(Textocomentario + ' - '+ puntaje + '/5');
     let parrafo = document.createElement('p');
+    
     parrafo.appendChild(texto);
 
 
