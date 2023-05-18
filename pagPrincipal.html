@@ -3,26 +3,12 @@
 <head>
     <title> Mercado Abierto</title>
     <link href="pagPrincipal.css" rel="stylesheet">
+    <script src="pagprincipal.js" defer></script>
 
 </head>
 <body>
-    <script>
-        async function MostrarCantidad(){
-            let response = await fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/statistics');
-            let objeto = await response.json();
-            
-            let cantidadProductos = objeto.amount_of_products;
-            let text = document.createTextNode(cantidadProductos);
-            document.getElementById("cantidadProductos").appendChild(text);
-        }
-        MostrarCantidad();
-        
-        
-        
-    </script>
-    <div class="buscador">
-
-    </div>
+  
+   
     <div class="grid-layout">
         <div id="buscador">
             <label>Buscar</label>
@@ -31,44 +17,7 @@
             <p>Cantidad de productos: <strong id="cantidadProductos"> </strong></p>
         </div>
         <div id="listado-productos">
-                <div class="caja">
-                    
-                   <a href="index.html" target="_blank" rel="noonpener noreferrer"><img src="img/motoed30 azul 1.jpg" alt="motoedge 30"><br>
-                    
-                    
-                    <p><strong>Motoedge 30</strong></p></a>
-                            
-                </div>
-                <div class="caja">
-                    <a href="index.html" target="_blank" rel="noonpener noreferrer"><img src="img/Iphone 13 pro.jpg"alt="Iphone 13 pro"><br>
-                    <p><strong>Iphone 13 pro</strong></p></a>
-                    
-                            
-                </div>
-                <div class="caja">
-                    <a href="index.html" target="_blank" rel="noonpener noreferrer"> <img src="img/Iphone 14 pro max.jpg"alt="Iphone 14 pro max"><br>
-                    <p><strong>Iphone 14 pro max</strong></p></a>
-                    
-                            
-                </div>
-                <div class="caja">
-                    <a href="index.html" target="_blank" rel="noonpener noreferrer"> <img src="img/Moto g 20.jpg"alt="Moto g 20"><br>
-                    <p><strong>Moto g 20    </strong></p></a>
-                    
-                            
-                </div>
-                <div class="caja">
-                    <a href="index.html" target="_blank" rel="noonpener noreferrer"><img src="img/Samsung A22.jpg"alt="Samsung A22"><br>
-                    <p><strong>Samsung A22</strong></p> </a>
-                    
-                            
-                 </div>
-                <div class="caja">
-                    <a href="index.html" target="_blank" rel="noonpener noreferrer"> <img src="img/Samsung s23.jpg"alt="Samsung s23"><br>
-                    <p><strong>Samsung s23</strong></p> </a>
-                    
-
-                            
+               
                 </div>
         </div>             
 
