@@ -35,10 +35,13 @@ body{
 }
 .caja3{
   grid-area: caracteristicas;
+  font-size: 2em;
   
   
   
 }
+
+
 
 .caja4{
   grid-area: descripcion;
