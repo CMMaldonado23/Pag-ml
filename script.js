@@ -24,7 +24,7 @@ function agregarCometario(evento){
 document.getElementById("boton-enviar-comentario").addEventListener('click', agregarCometario);
 
 
-
+/*
 async function cargarDatosProducto() {
     let response = await fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/products/1');
     let producto = await response.json();
@@ -67,48 +67,31 @@ async function cargarDatosProducto() {
 
     
 }
-
-
-
-
-/*
-    let imagen = objeto.image_url;
-    console.log(imagen)
-    let textImagen = document.createTextNode(imagen);
-    let img = document.createElement('img');
-    img.src = imagen
-    document.getElementById("imagen-producto").appendChild(img)
-
-    let descripcion = objeto.description;
-    console.log(descripcion)
-    let text3 = document.createTextNode(descripcion);
-    document.getElementById("descripcion1").appendChild(text3);
-
-    let url = objeto.factory_url;
-    console.log(url)
-    let a = document.getElementById("link");
-    a.href = url
-
-    let tipoNootebook = objeto.notebooksTypes;
-    console.log(tipoNootebook)
-
-    for (let tipo of productos.notebooksTypes){
-        let h3 = document.createElement('h3');
-        let textH3 = document.createTextNode('Tipo Computadora')
-        let lista = document.createElement('ul');
-        let precio = document.createElement('li');
-        let ram = document.createElement('li');
-        let preciotxt = document.createTextNode('precio: ' + tipoNootebook.precio)
-        let ramtxt = document.createTextNode('Ram: ' + tipoNootebook.ram)
-
-        precio.appendChild(preciotx)
-        ram.appendChild(ramtxt)
-
-        lista.appendChild(precio)
-        lista.appendChild(ram)
-    }
-*/
-
 }
-cargarDatosProducto();
+cargarDatosProducto();*/
 
+const app = Vue.createApp({
+    data(){
+        return{
+            
+                "id": 1,
+                "title": "Notebook HP 14-dq2024la",
+                "description": "Computadora HP orientado para gama media. Procesador Intel® Core™ i3 de 11.ª generación.  Windows 10 Home 64.  Unidad de estado sólido PCIe® NVMe™ M.2 de 256 GB . Pantalla de 14 pulgadas.",
+                "image_url": "https://ar-media.hptiendaenlinea.com/catalog/product/8/V/8VW01LA-1_T1615590539.png",
+                "factory_url": "https://www.hp.com/ar-es/shop/notebook-hp-14-dq2024la-3v8j6la.html",
+                "notebooksTypes": [
+                  {
+                    "ramAmount": "8 GB",
+                    "price": 98038
+                  },
+                  {
+                    "ramAmount": "16 GB",
+                    "price": 122547
+                  }
+                ]
+              }
+        }
+    
+})
+
+app.mount('.grid-layout')

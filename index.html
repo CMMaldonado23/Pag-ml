@@ -7,20 +7,22 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Lobster&family=Roboto+Condensed:ital,wght@1,300&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
         <script src = "script.js" defer></script>
+        <script src="https://unpkg.com/vue@3.3.2/dist/vue.global.js"></script>
+        
     </head>
     <body>
         <div class="grid-layout" > 
             <div class="caja1"> 
                 <!--caja 1 titulo-->
                 
-                 <h1 id="titulo-producto"></h1>
+                 <h1 id="titulo-producto"> {{ title }}</h1>
 
             </div>
 
             <div class="caja2">  
                 <!--caja 2 foto-->
                 
-                <img Src = "" id="imagen"><br>            
+                <img :Src = "image_url" id="imagen"><br>            
             
             </div>
             <div class="caja3">  
@@ -28,9 +30,15 @@
                
                 <h3 class ="titulos">Características principales</h3>
                 
-                <div id="descripcion">
-                    
-                </div>                 
+                <ul>
+                    <li>Precio: {{ notebooksTypes[0].price }}</li>
+                    <li>RAM: {{ notebooksTypes[0].ramAmount }} GB</li>
+                </ul>
+                <h3>Tipo computadora:</h3>
+                <ul>
+                    <li>Precio: {{ notebooksTypes[1].price }}</li>
+                    <li>RAM: {{ notebooksTypes[1].ramAmount }} GB</li>
+                </ul>
                     
 
                 
@@ -38,9 +46,9 @@
             <div class="caja4">  
                 <!--caja 4 descripcion-->
                 
-                <p id="texto-descripcion"></p>
+                <p id="texto-descripcion">{{ description }}</p>
 
-                <h3 class="parrafo-especial">somos vendedores oficiales de <a href="" id="link"target="_blank" rel="noonpener noreferrer">Hp</a> Argentina</h3>
+                <h3 class="parrafo-especial">somos vendedores oficiales de <a :href="factory_url" id="link"target="_blank" rel="noonpener noreferrer">Hp</a> Argentina</h3>
 
             </div>
             <div class="caja5">  
