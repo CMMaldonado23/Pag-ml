@@ -17,6 +17,11 @@ body{
   grid-template-columns: 35% auto ;
   grid-template-rows: auto auto auto auto;
 }
+
+.imagen-miniatura {
+  max-width: 100px;
+  max-height: 99px;
+}
 .caja1{
   text-align: center;
   grid-area: titulo;

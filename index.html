@@ -16,6 +16,7 @@
                 <!--caja 1 titulo-->
                 
                  <h1 id="titulo-producto"> {{ title }}</h1>
+                 
 
             </div>
 
@@ -27,6 +28,10 @@
             </div>
             <div class="caja3">  
                 <!--caja 3 caracteristicas-->
+                <img v-for="imagen in imagenes" class="imagen-miniatura" :src="imagen" @mouseover="cambiarImagen(imagen)" >
+                
+
+                <p>cantidad comprados: {{ cantidadComprados }}</p>
                
                 <h3 class ="titulos">Características principales</h3>
                 
@@ -40,7 +45,8 @@
                     <li>RAM: {{ notebooksTypes[1].ramAmount }} GB</li>
                 </ul>
                     
-
+                
+                <button @click="clickBotonCompra()" > Comprar </button>
                 
             </div>
             <div class="caja4">  
