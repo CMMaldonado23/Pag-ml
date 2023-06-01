@@ -34,18 +34,15 @@
                 <p>cantidad comprados: {{ cantidadComprados }}</p>
                
                 <h3 class ="titulos">Características principales</h3>
+                <h3> Tipo computadora: </h3>
+                <div v-for="notebookType in notebooksTypes">
                 
                 <ul>
-                    <li>Precio: {{ notebooksTypes[0].price }}</li>
-                    <li>RAM: {{ notebooksTypes[0].ramAmount }} GB</li>
+                    <li>Precio: {{ notebookType.price }}</li>
+                    <li>RAM: {{ notebookType.ramAmount }}</li>
                 </ul>
-                <h3>Tipo computadora:</h3>
-                <ul>
-                    <li>Precio: {{ notebooksTypes[1].price }}</li>
-                    <li>RAM: {{ notebooksTypes[1].ramAmount }} GB</li>
-                </ul>
-                    
-                
+            </div>
+            
                 <button @click="clickBotonCompra()" > Comprar </button>
                 
             </div>
