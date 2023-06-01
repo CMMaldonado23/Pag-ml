@@ -31,19 +31,42 @@
                 <img v-for="imagen in imagenes" class="imagen-miniatura" :src="imagen" @mouseover="cambiarImagen(imagen)" >
                 
 
-                <p>cantidad comprados: {{ cantidadComprados }}</p>
+                
+                <h2>Precio: $ {{notebooksTypes[notebookSeleccionada].price}}</h2>
+
+                <p v-if="mostrarCarroDeCompras">Carro de compras</p>
+                <ul>
+
+                    <li v-for="(notebookComprada, indice) in notebooksCompradas" :key="indice">
+                        {{notebookComprada.ramAmount}}: $ {{notebookComprada.price}}
+                        <button @click="eliminarCompra(indice)" >Eliminar</button>
+                    </li>
+                        
+                    
+                    
+                </ul>
+                <p>Total:{{total}}</p>
                
                 <h3 class ="titulos">Características principales</h3>
-                <h3> Tipo computadora: </h3>
+                <ul>
+
+                    <li v-for="(notebookType, indice) in notebooksTypes" :key="indice" >
+                      <button @click="seleccionarTipoPc(indice)">Ram: {{notebookType.ramAmount}}</button>
+
+                      <button @click="clickBotonCompra(indice)" > Comprar </button>
+                    </li>
+                </ul>
+
+                <!--<h3> Tipo computadora: </h3>
                 <div v-for="notebookType in notebooksTypes">
                 
                 <ul>
-                    <li>Precio: {{ notebookType.price }}</li>
+                     <li>Precio: {{ notebookType.price }}</li> 
                     <li>RAM: {{ notebookType.ramAmount }}</li>
                 </ul>
-            </div>
-            
-                <button @click="clickBotonCompra()" > Comprar </button>
+            </div> una forma de hacer la lista -->
+
+                
                 
             </div>
             <div class="caja4">  
